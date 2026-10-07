@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Técnico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <section class="formulario">
+
+            <div class="cabecalho">
+                <span class="etiqueta">Desenvolvimento Web</span>
+
+                <h1>Crie seu cadastro</h1>
+
+                <p>
+                    Preencha os dados abaixo para registrar seu perfil técnico.
+                </p>
+            </div>
+
+            <form id="cadastroForm">
+
+                <div class="campo">
+                    <label for="nome">Nome Completo</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Digite seu nome completo"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail Institucional</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="nome@instituicao.com"
+                        required
+                    >
+                </div>
+
+                <div class="duas-colunas">
+
+                    <div class="campo">
+                        <label for="senha">Senha</label>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            placeholder="Mínimo 6 caracteres"
+                            minlength="6"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="confirmaSenha">Confirmar Senha</label>
+
+                        <input
+                            type="password"
+                            id="confirmaSenha"
+                            placeholder="Repita sua senha"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <div class="campo">
+                    <label for="perfil">Perfil Técnico</label>
+
+                    <select id="perfil" required>
+
+                        <option value="">
+                            Selecione uma área
+                        </option>
+
+                        <option value="Desenvolvimento">
+                            Desenvolvimento
+                        </option>
+
+                        <option value="Redes">
+                            Redes
+                        </option>
+
+                        <option value="Suporte">
+                            Suporte
+                        </option>
+
+                    </select>
+                </div>
+
+                <div class="termos">
+
+                    <input
+                        type="checkbox"
+                        id="termos"
+                        required
+                    >
+
+                    <label for="termos">
+                        Li e aceito os termos de uso
+                    </label>
+
+                </div>
+
+                <p id="mensagemErro"></p>
+
+                <button type="submit">
+                    Finalizar Cadastro
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="painel">
+
+            <div class="painel-conteudo">
+
+                <span class="etiqueta painel-etiqueta">
+                    Perfil cadastrado
+                </span>
+
+                <h2>Seus dados aparecerão aqui.</h2>
+
+                <p class="descricao">
+                    Após preencher corretamente o formulário, as informações
+                    serão exibidas neste painel sem recarregar a página.
+                </p>
+
+                <div class="dados">
+
+                    <div class="dado">
+                        <span>Nome</span>
+                        <strong id="saidaNome">Não informado</strong>
+                    </div>
+
+                    <div class="dado">
+                        <span>E-mail</span>
+                        <strong id="saidaEmail">Não informado</strong>
+                    </div>
+
+                    <div class="dado">
+                        <span>Perfil</span>
+                        <strong id="saidaPerfil">Não informado</strong>
+                    </div>
+
+                </div>
+
+                <p id="mensagemSucesso"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
